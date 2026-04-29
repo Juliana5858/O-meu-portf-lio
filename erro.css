@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;           /* 100% da altura da visão do navegador */
+  width: 100vw;            /* 100% da largura */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  background: linear-gradient(135deg, #043117 0%, #d8f1b0 100%);
+  font-family: 'Arial Black', sans-serif;
+}
+
+.imagem{
+    filter: drop-shadow(0px 4px 10px rgba(86, 128, 72, 0.25));
+}
+
+@keyframes pular {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.botao-hamburguer {
+  animation: pular 2s infinite ease-in-out;
+}
+
+
+/* 2. O container que agrupa as frases e o botão */
+.pagina-erro {
+    display: flex;
+    flex-direction: column;  /* Empilha os itens */
+    align-items: center;     /* Garante que o hambúrguer e textos fiquem no eixo central */
+    text-align: center;      /* Centraliza o texto dentro das tags <p> */
+    gap: 25px; 
+    background-color: white;
+    border-radius: 10px;
+    padding: 60px;
+    box-shadow:  0 4px 20px rgb(247, 243, 243);
+    max-width: 450px;
+    width:90%;/* Espaçamento equilibrado entre os elementos */
+}
+
+.frase {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.frase2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.frase1 {
+  margin: 0;
+  font-size: 1rem;
+  color: #e0a839;
+}
+
+.botao-hamburguer {
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 140px; /* Mais largo para caber o texto */
+  text-decoration: none;
+  position: relative; /* Necessário para posicionar o texto */
+  transition: transform 0.2s ease;
+  margin: 20px;
+}
+
+
+/* O Texto "Clica Aqui" */
+.texto-botao {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Garante que o texto fique por cima de tudo */
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 14px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para dar leitura */
+  white-space: nowrap;
+  pointer-events: none; /* O clique passa através do texto para o botão */
+}
+
+.botao-hamburguer:hover {
+  transform: scale(1.05);
+}
+
+/* --- Ingredientes Largos --- */
+
+.pao-cima {
+  width: 120px; /* Esticado */
+  height: 30px;
+  background-color: #e28743;
+  border-radius: 40px 40px 8px 8px;
+}
+
+.queijo {
+  width: 125px; /* Queijo sobrando nas pontas */
+  height: 8px;
+  background-color: #ffcc00;
+  border-radius: 2px;
+}
+
+.carne {
+  width: 120px;
+  height: 20px;
+  background-color: #5d3422;
+  border-radius: 8px;
+}
+
+.pao-baixo {
+  width: 120px;
+  height: 18px;
+  background-color: #e28743;
+  border-radius: 5px 5px 20px 20px;
+}
